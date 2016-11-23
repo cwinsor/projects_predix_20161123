@@ -1,0 +1,9 @@
+---
+applications:
+- name: 01719-gs-spring-boot
+  path: /predix/Documents/project-001-gs-spring-boot/gs-spring-boot/complete/target/gs-spring-boot-0.1.0.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  disk_quota: 1024M
+
+
+

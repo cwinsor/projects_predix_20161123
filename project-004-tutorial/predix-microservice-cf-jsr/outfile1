@@ -1,0 +1,439 @@
+Using manifest file /predix/Documents/project-004-tutorial/predix-microservice-cf-jsr/manifest.yml
+
+
+REQUEST: [2016-11-22T03:15:52Z]
+POST /oauth/token HTTP/1.1
+Host: login.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+grant_type=refresh_token&refresh_token=f4de270018fc4b679b0e6368f438d993-r&scope=
+
+RESPONSE: [2016-11-22T03:15:52Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1400
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Tue, 22 Nov 2016 03:15:52 GMT
+Pragma: no-cache
+Server: Apache-Coyote/1.1
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: b66dc11c-49e3-4a28-654c-601f78f6a8be
+X-Xss-Protection: 1; mode=block
+
+{"access_token":"[PRIVATE DATA HIDDEN]","token_type":"bearer","refresh_token":"[PRIVATE DATA HIDDEN]","expires_in":7199,"scope":"cloud_controller.read password.write cloud_controller.write openid uaa.user","jti":"140f6e4dc25448a9a8e3a67b7f879004"}
+
+REQUEST: [2016-11-22T03:15:52Z]
+GET /v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/apps?q=name%3A01719-predix-microservice-cf-jsr&inline-relations-depth=1 HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-22T03:15:53Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 107
+Content-Type: application/json;charset=utf-8
+Date: Tue, 22 Nov 2016 03:15:53 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 5bbf2de6-e856-42de-7d98-424cb2015570
+X-Vcap-Request-Id: 5bbf2de6-e856-42de-7d98-424cb2015570::9ec68598-bc6f-4cff-8612-53053dfd71b2
+
+{
+  "total_results": 0,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+
+  ]
+}
+Creating app 01719-predix-microservice-cf-jsr in org cwinsor@gmail.com / space foobar as cwinsor@gmail.com...
+
+REQUEST: [2016-11-22T03:15:53Z]
+POST /v2/apps?async=true HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+{"name":"01719-predix-microservice-cf-jsr","space_guid":"ce0cff01-4fa1-49cb-a65f-75620197bc12","buildpack":"java_buildpack","environment_json":{"JAVA_DOCS_URL":"https://predixdev.github.io/predix-microservice-cf-jsr","SPRING_PROFILES_ACTIVE":"cloud"},"health_check_timeout":180}
+
+RESPONSE: [2016-11-22T03:15:54Z]
+HTTP/1.1 201 Created
+Connection: close
+Content-Length: 1785
+Content-Type: application/json;charset=utf-8
+Date: Tue, 22 Nov 2016 03:15:54 GMT
+Location: /v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 05453a46-ded3-4c19-488e-57185c2122e8
+X-Vcap-Request-Id: 05453a46-ded3-4c19-488e-57185c2122e8::d841acee-229b-482a-997d-f70b8fd8a43b
+
+{
+  "metadata": {
+    "guid": "198bf375-9b8f-47ed-a335-06bb56418e86",
+    "url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86",
+    "created_at": "2016-11-22T03:15:54Z",
+    "updated_at": null
+  },
+  "entity": {
+    "name": "01719-predix-microservice-cf-jsr",
+    "production": false,
+    "space_guid": "ce0cff01-4fa1-49cb-a65f-75620197bc12",
+    "stack_guid": "b2482801-cd40-4f6b-9f59-e0647b872028",
+    "buildpack": "java_buildpack",
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "environment_json": {
+      "JAVA_DOCS_URL": "https://predixdev.github.io/predix-microservice-cf-jsr",
+      "SPRING_PROFILES_ACTIVE": "cloud"
+    },
+    "memory": 1024,
+    "instances": 1,
+    "disk_quota": 1024,
+    "state": "STOPPED",
+    "version": "5f4c5dc7-f656-42fa-b4c1-cb764c477201",
+    "command": null,
+    "console": false,
+    "debug": null,
+    "staging_task_id": null,
+    "package_state": "PENDING",
+    "health_check_type": "port",
+    "health_check_timeout": 180,
+    "staging_failed_reason": null,
+    "staging_failed_description": null,
+    "diego": false,
+    "docker_image": null,
+    "package_updated_at": null,
+    "detected_start_command": "",
+    "enable_ssh": true,
+    "docker_credentials_json": {
+      "redacted_message": "[PRIVATE DATA HIDDEN]"
+    },
+    "ports": null,
+    "space_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12",
+    "stack_url": "/v2/stacks/b2482801-cd40-4f6b-9f59-e0647b872028",
+    "routes_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/routes",
+    "events_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/events",
+    "service_bindings_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/service_bindings",
+    "route_mappings_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/route_mappings"
+  }
+}
+OK
+
+
+REQUEST: [2016-11-22T03:15:54Z]
+GET /v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/private_domains HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-22T03:15:54Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 107
+Content-Type: application/json;charset=utf-8
+Date: Tue, 22 Nov 2016 03:15:54 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 4a7ae088-04bf-464e-5deb-72a220e5aa50
+X-Vcap-Request-Id: 4a7ae088-04bf-464e-5deb-72a220e5aa50::6b717d96-ddb4-4553-8c0f-d72e06ac9e92
+
+{
+  "total_results": 0,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+
+  ]
+}
+
+REQUEST: [2016-11-22T03:15:54Z]
+GET /v2/shared_domains HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-22T03:15:55Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1689
+Content-Type: application/json;charset=utf-8
+Date: Tue, 22 Nov 2016 03:15:55 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 6b35397b-ff00-4aab-5ded-13e9c93ae50e
+X-Vcap-Request-Id: 6b35397b-ff00-4aab-5ded-13e9c93ae50e::2588e408-ac4f-4cce-b39a-7cdbc16be11a
+
+{
+  "total_results": 4,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+        "url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+        "created_at": "2015-09-10T22:25:39Z",
+        "updated_at": "2016-10-21T04:41:17Z"
+      },
+      "entity": {
+        "name": "run.aws-usw02-pr.ice.predix.io",
+        "router_group_guid": null,
+        "router_group_type": null
+      }
+    },
+    {
+      "metadata": {
+        "guid": "b63389cc-e7c6-4073-bfd2-2457739f0273",
+        "url": "/v2/shared_domains/b63389cc-e7c6-4073-bfd2-2457739f0273",
+        "created_at": "2016-01-25T19:54:23Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "run.aws-usw02-pr-priv.ice.predix.io",
+        "router_group_guid": null,
+        "router_group_type": null
+      }
+    },
+    {
+      "metadata": {
+        "guid": "d6cbf7dc-baa5-4b15-8783-91cbc18b3b70",
+        "url": "/v2/shared_domains/d6cbf7dc-baa5-4b15-8783-91cbc18b3b70",
+        "created_at": "2016-05-16T02:13:21Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "run.aws-usw02-pr-oo-dev.ice.predix.io",
+        "router_group_guid": null,
+        "router_group_type": null
+      }
+    },
+    {
+      "metadata": {
+        "guid": "227974f0-d0dd-4b26-b1e4-c2551e5b1a69",
+        "url": "/v2/shared_domains/227974f0-d0dd-4b26-b1e4-c2551e5b1a69",
+        "created_at": "2016-11-10T17:20:15Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "run.asv-pr.ice.predix.io",
+        "router_group_guid": null,
+        "router_group_type": null
+      }
+    }
+  ]
+}
+
+REQUEST: [2016-11-22T03:15:55Z]
+GET /v2/routes?inline-relations-depth=1&q=host%3A01719-predix-microservice-cf-jsr%3Bdomain_guid%3A2a4227ca-1fd5-4c19-a284-29ab47650c8b HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-22T03:15:55Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 2980
+Content-Type: application/json;charset=utf-8
+Date: Tue, 22 Nov 2016 03:15:55 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 38118d09-d2f1-41b1-670a-cbd6d4e57990
+X-Vcap-Request-Id: 38118d09-d2f1-41b1-670a-cbd6d4e57990::169ae924-103a-4703-9f66-bc4637065819
+
+{
+  "total_results": 1,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "0e59764a-e3e7-417a-a84e-3a03496623f6",
+        "url": "/v2/routes/0e59764a-e3e7-417a-a84e-3a03496623f6",
+        "created_at": "2016-11-22T02:48:43Z",
+        "updated_at": null
+      },
+      "entity": {
+        "host": "01719-predix-microservice-cf-jsr",
+        "path": "",
+        "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+        "space_guid": "ce0cff01-4fa1-49cb-a65f-75620197bc12",
+        "service_instance_guid": null,
+        "port": null,
+        "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+        "domain": {
+          "metadata": {
+            "guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+            "url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+            "created_at": "2015-09-10T22:25:39Z",
+            "updated_at": "2016-10-21T04:41:17Z"
+          },
+          "entity": {
+            "name": "run.aws-usw02-pr.ice.predix.io",
+            "router_group_guid": null,
+            "router_group_type": null
+          }
+        },
+        "space_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12",
+        "space": {
+          "metadata": {
+            "guid": "ce0cff01-4fa1-49cb-a65f-75620197bc12",
+            "url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12",
+            "created_at": "2016-11-20T17:55:20Z",
+            "updated_at": null
+          },
+          "entity": {
+            "name": "foobar",
+            "organization_guid": "bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+            "space_quota_definition_guid": null,
+            "isolation_segment_guid": null,
+            "allow_ssh": true,
+            "organization_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+            "developers_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/developers",
+            "managers_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/managers",
+            "auditors_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/auditors",
+            "apps_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/apps",
+            "routes_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/routes",
+            "domains_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/domains",
+            "service_instances_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/service_instances",
+            "app_events_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/app_events",
+            "events_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/events",
+            "security_groups_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12/security_groups"
+          }
+        },
+        "apps_url": "/v2/routes/0e59764a-e3e7-417a-a84e-3a03496623f6/apps",
+        "apps": [
+
+        ],
+        "route_mappings_url": "/v2/routes/0e59764a-e3e7-417a-a84e-3a03496623f6/route_mappings"
+      }
+    }
+  ]
+}
+Using route 01719-predix-microservice-cf-jsr.run.aws-usw02-pr.ice.predix.io
+Binding 01719-predix-microservice-cf-jsr.run.aws-usw02-pr.ice.predix.io to 01719-predix-microservice-cf-jsr...
+
+REQUEST: [2016-11-22T03:15:55Z]
+PUT /v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/routes/0e59764a-e3e7-417a-a84e-3a03496623f6 HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-22T03:15:56Z]
+HTTP/1.1 201 Created
+Connection: close
+Content-Length: 1803
+Content-Type: application/json;charset=utf-8
+Date: Tue, 22 Nov 2016 03:15:56 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: af353b91-5212-4373-65a6-40b62a6f0fdb
+X-Vcap-Request-Id: af353b91-5212-4373-65a6-40b62a6f0fdb::0f116f71-7eb9-4305-a301-dcffce389590
+
+{
+  "metadata": {
+    "guid": "198bf375-9b8f-47ed-a335-06bb56418e86",
+    "url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86",
+    "created_at": "2016-11-22T03:15:54Z",
+    "updated_at": "2016-11-22T03:15:56Z"
+  },
+  "entity": {
+    "name": "01719-predix-microservice-cf-jsr",
+    "production": false,
+    "space_guid": "ce0cff01-4fa1-49cb-a65f-75620197bc12",
+    "stack_guid": "b2482801-cd40-4f6b-9f59-e0647b872028",
+    "buildpack": "java_buildpack",
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "environment_json": {
+      "JAVA_DOCS_URL": "https://predixdev.github.io/predix-microservice-cf-jsr",
+      "SPRING_PROFILES_ACTIVE": "cloud"
+    },
+    "memory": 1024,
+    "instances": 1,
+    "disk_quota": 1024,
+    "state": "STOPPED",
+    "version": "c7ba0368-7c08-4a2e-aa75-c0b7662f357a",
+    "command": null,
+    "console": false,
+    "debug": null,
+    "staging_task_id": null,
+    "package_state": "PENDING",
+    "health_check_type": "port",
+    "health_check_timeout": 180,
+    "staging_failed_reason": null,
+    "staging_failed_description": null,
+    "diego": false,
+    "docker_image": null,
+    "package_updated_at": null,
+    "detected_start_command": "",
+    "enable_ssh": true,
+    "docker_credentials_json": {
+      "redacted_message": "[PRIVATE DATA HIDDEN]"
+    },
+    "ports": null,
+    "space_url": "/v2/spaces/ce0cff01-4fa1-49cb-a65f-75620197bc12",
+    "stack_url": "/v2/stacks/b2482801-cd40-4f6b-9f59-e0647b872028",
+    "routes_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/routes",
+    "events_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/events",
+    "service_bindings_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/service_bindings",
+    "route_mappings_url": "/v2/apps/198bf375-9b8f-47ed-a335-06bb56418e86/route_mappings"
+  }
+}
+OK
+
+Uploading 01719-predix-microservice-cf-jsr...
+
+REQUEST: [2016-11-22T03:15:56Z]
+PUT /v2/resource_match HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+[{"sha1":"0","size":0},{"sha1":"653423f7bb6d314149f8aeeb54e30e6bde3e365e","size":453},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"ad954b7d4a5a7a36e322cb5b2f07bca282b5f539","size":131},{"sha1":"5ed7f76b9e31d833c45aaf031b229db5bf8642c5","size":10849},{"sha1":"0","size":0},{"sha1":"5dc3b3b089a024b8c1a565cc5c2e94dacad459cb","size":1933},{"sha1":"bb65226deacd55236aed172db35c05f60b858182","size":565},{"sha1":"c198a09c645536eb5cf3fe99655670d03ba3b3c0","size":524},{"sha1":"7cc113d19304f23da794390384e2302782c98023","size":190},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"8bb52411f111d8356201ea7c49c8f9bc12898862","size":7009},{"sha1":"037a406016cedb9efcf8ae02226e3bbbcba9c0fb","size":2276},{"sha1":"855a0a78e9181cca79f6c4cbbbb3e52649079320","size":1026},{"sha1":"fec5072d38cf23594d050f9f9dcc4e0667a33b7b","size":4832},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"1c65a23cc981be44cc6f22d996924c2ec005724b","size":5288},{"sha1":"db327070dc409d4e8ced16922b252ab3d147a5dd","size":3380},{"sha1":"5b1f1dc17483b2307a16cb3b616b119e608cdf12","size":521},{"sha1":"916d1af017f3e733f35b4bfd049e209ab2fecd56","size":2289},{"sha1":"0","size":0},{"sha1":"371951e5e7e7cc735218d11964f543c340441db1","size":349},{"sha1":"50235dd4cd84cfcc10a0dafcf2f0bf4e3d267efd","size":1054},{"sha1":"08c4323c3ab91253001b1f8e75c63549da9650af","size":3230},{"sha1":"0","size":0},{"sha1":"9ef6656259841cebfb9fb0697bb122ada4485498","size":74557},{"sha1":"0235ba8b489512805ac13a8f9ea77a1ca5ebe3e8","size":4467},{"sha1":"434efef28c81162b17c540e634cffa3bd9b09b4c","size":60282},{"sha1":"66f13681add50ca9e4546ffabafaaac7645db3cf","size":385091},{"sha1":"679c1d2ab838bd7b53b82140199648051b2adfec","size":1354879},{"sha1":"cc2c93febc080bd0922bbf1a0c7b61ec697714f0","size":623926},{"sha1":"4ad8ee7955271c487eacad01457523393be91fbf","size":88294},{"sha1":"95e7de14ca469f09608b395d1452554fee952c15","size":39733},{"sha1":"11d1433937463c1b717916cb7ddf8a91620de22c","size":344190},{"sha1":"cce0823396aa693798f8882e64213b1772032b09","size":2256213},{"sha1":"334d46a93cf095160ce06d8382594b904933c808","size":634265},{"sha1":"b400d47efaf8ab612c03b904ae5bf26c6706ade6","size":38596},{"sha1":"6fb96728ee26edb19fe329d94f3bd4df1a97652a","size":225348},{"sha1":"8493982bba1727106d767034bd0d8e77bc1931a9","size":228286},{"sha1":"c69c0cb613128c69d84a6a0304ddb9fce82e8242","size":1076162},{"sha1":"535f27c7e322abc54c9758b50df1594f31ee6524","size":90656},{"sha1":"918e84a84ee0b202bb74bab590119b01bbea9830","size":320960},{"sha1":"830f7e1a9d69674900d1fa066d6ba27112ec6ca9","size":56266},{"sha1":"aedf43f1d5005561e531b6bf0d067e4d20f58aba","size":18323},{"sha1":"b5a04c9664913552b75820834e945424e32b244f","size":28664},{"sha1":"aefd5dd637402fd697c1e2b083535d153ffd66c0","size":16634},{"sha1":"95400a7922ce75383866eb72f6ef4a7897923945","size":765648},{"sha1":"af5432247be7a0248a03b900687bb9a74a68ccfa","size":32373},{"sha1":"d9a09f7732226af26bf99f19e2cffe0ae219db5b","size":714194},{"sha1":"479c1e06db31c432330183f5cae684163f186146","size":26366},{"sha1":"104e9c2b5583cfcfeac0402316221648d6d8ea6b","size":115534},{"sha1":"64499e907f19e5e1b3fdc02f81440c1832fe3545","size":57183},{"sha1":"180246b7809ffae6293eea3d34e668ee948f0dc8","size":16615},{"sha1":"c73038a3688525aad5cf33409df483178290cd64","size":588001},{"sha1":"87a1d59c837c57396bc20f433ee24ad3a59c7812","size":4736},{"sha1":"4f51599470151c7b8ebec1d36767138f7fb7d427","size":24543},{"sha1":"d90276fff414f06cb375f2057f6778cd63c6082f","size":280928},{"sha1":"e3c02049f2dbbc764681b40094ecf0dcbc99b157","size":455041},{"sha1":"79a8984096fc6591c1e3690e07d41be506356fa5","size":1581066},{"sha1":"37e1aebfde7eb7baebc9ad4f85116ef9009c5fc5","size":228241},{"sha1":"c7f4ea230aedc757ca1499ebcfb2953c81cf8b67","size":129763},{"sha1":"007eaaaf2238f324e2b02dbd4d6ced6778b99328","size":32126},{"sha1":"c2df91929ed06a25001939929bff5120e0ea3fd4","size":275115},{"sha1":"686c13ba57d9423dede9c5d580dcadc5c67a2761","size":359014},{"sha1":"ce2d409d470948f11fad41ffdf37dcff4d28cd7c","size":708371},{"sha1":"2601c81786dd8d88fd7e53af1a3950ef45fd5507","size":425355},{"sha1":"11175f217ac34bdacd6282cd44310f211121e270","size":500447},{"sha1":"a50eea39bce85f09db0fc43d80e86aa767e8cc24","size":2215},{"sha1":"43093c137ea9c6d26ca6341e17295c0a6c506dfb","size":2247},{"sha1":"014d951cb574fbab8d232bca2926f8653d9c6609","size":2301},{"sha1":"bebade6f3d65466c134b876f9bf065868e8ff6a7","size":2307},{"sha1":"32de443f4e43ceee62c3e1e855fee076fec546b3","size":2213},{"sha1":"d4a2ea5c2dfa465054d9b2675ff7794d8d97f311","size":2275},{"sha1":"47384e4f2e3a5294284307cd0c1db36559487d8a","size":38823},{"sha1":"15f0b22bf89ed468badbc4eec759af2b916d33e4","size":1026330},{"sha1":"e2f486124d5dea2d91a9c2ea7d4456bc343ca2cc","size":1007922},{"sha1":"8bf70887c2c883a6f6e552dbe46eec35c07adf6a","size":259014},{"sha1":"36ded839a3f90b268c2b708a5a92a50aa0412223","size":407548},{"sha1":"50c170701f0cc9a99d14a50a7a97ff0c651bab66","size":368402},{"sha1":"3170f54765d6d9f99cf2d4ba7f25698d1026cf6f","size":344402},{"sha1":"960101b25d0ec6f45d550bf92c00de8c6a584e6a","size":718705},{"sha1":"e1ee19a5359f214d65cc18972df8aba17ce1e423","size":780778},{"sha1":"b9b387cdb1716e828e5cfc015a5f224b6b209c5e","size":8505},{"sha1":"ac19014b1e6a7c08aad07fe114af792676b685b7","size":161867},{"sha1":"0598403e3d21da08f8e46efb9f2b6d7b1bc0046d","size":16053},{"sha1":"17338eed33903397a508e92ff6f98de53f99350e","size":104551},{"sha1":"8963cb24f7c1bdc76604919b30cd6ae7d5f660d3","size":63378},{"sha1":"7cc6e2b63619d826f9da4203630ab7add866a473","size":136633},{"sha1":"a730d892f3c57ba3d24af2ca657b42d81398a85a","size":799284},{"sha1":"96a7509eb8cf8bdb5a9b82b93de9b76ecb915d1b","size":26676},{"sha1":"e5677e7daedfd05e001945abf4295305ac23826b","size":224290},{"sha1":"5810725255089f4d0b7ab19ac70b8c4a9cd8d4a3","size":2838183},{"sha1":"8050b326d0ee31ba91b06e420b57efe77a6f0516","size":237287},{"sha1":"234ee053b3dbd4bca2fc221a99d4f7d292d33e0b","size":40997},{"sha1":"0b4914491d1baa90958e5c951bec7140e65874f3","size":243539},{"sha1":"ab0db4fe0a6fa89fb8da2a40008a4e63a7f3f5b9","size":139881},{"sha1":"8613ae82954779d518631e05daa73a6a954817d5","size":63777},{"sha1":"84fee5eb1a4a1cefe65b6883c73b3fa83be3c1a1","size":486013},{"sha1":"02eff1f3776590d4c51cc735eab2143c497329f2","size":171989},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"54b511460319bf18debb2d66c56cb9a5da9a691b","size":1158},{"sha1":"4d149b9818e49b41c458ad02a9d9204579d65e7a","size":4915},{"sha1":"b1db4d61c8aedc1d938449ee5c07f8bd5b709a5d","size":1085},{"sha1":"81d5a6045b6a1f61b96dbc95b01884cd06038078","size":3414},{"sha1":"4ba3ad48739fa892cd97fb3ca2939c2261f25216","size":1913},{"sha1":"2476df6ddd0444558a60c70733a368f2afbf4aa4","size":192},{"sha1":"0aa1678fb6042d85985e4290c7345651db7fc858","size":1382},{"sha1":"feb2e820e8176e8a3cf0f9d97f7c2be5afb4cfc9","size":2207},{"sha1":"13e494a2e662fb1e2576b10ba3019b6037e80bbb","size":1179},{"sha1":"de73cceae9570262230bca24a62701c50ee9ebc3","size":1057},{"sha1":"1c818620f50087d8742641e341824d6ff48f8caf","size":6493},{"sha1":"fb7d0897d5071ada21324bc36161eeaa574793a1","size":5794},{"sha1":"b63bab7a6b9c91cbef37787396044268c4a15373","size":1949},{"sha1":"c360f08d3e1dba76c10d2f7afd1437ec0f461bab","size":269},{"sha1":"a4d353c0bae124e6a6b35edfe35429f52dbd993d","size":1683},{"sha1":"0d0cc7a8e9803f46cc19868076c2a6626e2f410b","size":1967},{"sha1":"4357f64526b7294ef02e08a652b0fa542f61bff2","size":18709},{"sha1":"2cfe754f24b27b1f1d739594c61fb29fd3fe5008","size":1940},{"sha1":"0","size":0},{"sha1":"bcec042439cd461b45c689605f10ec756e005604","size":333},{"sha1":"d8bd747b6b68fdfd316818e0cf40e3b46d3ee31a","size":399},{"sha1":"f49b1b350c4abee481dee9046af9cb70dc3f9459","size":506},{"sha1":"3bc4db0c608cd7634d979ee3fb0ba5b787ee7ee8","size":2419},{"sha1":"10cdf0f5944258f0fea8956765dbda93107429e2","size":1310},{"sha1":"b018c119c2cc7581b3a37d73b06b881c366101b1","size":884},{"sha1":"72afce914c2d3baa5527f0584c4639f28a0e57d4","size":1865},{"sha1":"cea0b85072a73982d706242d2482aeb910d3be49","size":8511},{"sha1":"f2fc635347067a888e3ef92e5bce55466f3911f0","size":1538},{"sha1":"469e935a8a23851c896047801c7b457883342078","size":1991},{"sha1":"f5d1c7b989a62975bc869e86124d76b51d0a2467","size":3774},{"sha1":"e0dd349f064f81a7705cdacf139df65a0b1a9cee","size":1941},{"sha1":"8d36aa3ca0df679dc2449aebe551b98d4f488561","size":1191},{"sha1":"cfd50906a2cef054102417e64cc91aa688d31db7","size":8148},{"sha1":"0","size":0},{"sha1":"d86ae5cc7d23bcf4fd3a91325a2ead70bc64bf7f","size":1531},{"sha1":"8b265f12275a1db843094cce2e1072542c3b3d5d","size":1347},{"sha1":"1c263db41c2219d77123b2048c6c519d5bc26344","size":551},{"sha1":"6265686f44d81a14c90490d1d4e8f30ed94a512f","size":3526},{"sha1":"de2ba9ad9c8730d8b9a7611755c66ed4c1d61f26","size":2235},{"sha1":"2f7e667e76b3106006524e6ea1588e8a9480373a","size":3390},{"sha1":"0","size":0},{"sha1":"836ba1848dc6d47b956e317c14bf491c06fb53e4","size":2165},{"sha1":"6a10772e97243d4cbb0d0616dc9958ec5287e627","size":2939},{"sha1":"4ca5425fb945ce1004e69a480124449e9d267324","size":6436},{"sha1":"86705952a980100f478990411847f8ec6fb140f9","size":2365},{"sha1":"5631fdfd4bee3c4164393ec1f8ad8cd19ebda2ba","size":5810},{"sha1":"5417db6bb9c478bde46b9456eb4aadc4e62e0556","size":314},{"sha1":"6329a83c4b3649308e17e58c18604ed9ad64e103","size":1295},{"sha1":"11a215c3a7c9d722a18c7eec5b78e4feed6644a0","size":1556},{"sha1":"89b762c9ff11bb5834d0cd06f1436aefa7bb2d81","size":16519},{"sha1":"51e68d17c0a6139a7236a5e559bd475d2b1b29e3","size":675},{"sha1":"5a1e1854060ca0a3c645440ce8ddc22e97c3461a","size":2827},{"sha1":"da0d7c204fe18f64b10ccce2795af41056838152","size":6571},{"sha1":"b06f43a1b434807c3a8c8ddc69bc53d31fc13d86","size":1629},{"sha1":"0","size":0},{"sha1":"ce1900ee2fe28b19f76bd30771c6f3c09e8be006","size":3701},{"sha1":"57cb4c61ebcf80f81d99da778b2cc024fd9146b3","size":4926},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"0","size":0},{"sha1":"3e233798412ed1353eb2caca982a6466dc8e7fac","size":46473},{"sha1":"040057c246cdcb290aec5c44b5970bbacabc3c7c","size":1066},{"sha1":"169820c38a0b6ba760b42b4aee5aed220793e900","size":48978},{"sha1":"4fb5d6ac10fade1c90d29c5bad51fd8b4ca447d0","size":4643},{"sha1":"385314f4065eff55c9ffdc3151bb47c2b94c665f","size":452},{"sha1":"0","size":0},{"sha1":"1c7cf1839d5a08786a8d496d75532b533d9a62cf","size":42480},{"sha1":"f786fc2b26717edabaace5e8647d0bd9641e4d3d","size":41028},{"sha1":"0","size":0},{"sha1":"b1db9bbee88e91ff7a10d59306fc0b9ee444f1c8","size":69},{"sha1":"2856782542796e5d83a945e6decb5bbdad027e60","size":73},{"sha1":"fa7f756e6a3388801ea8dffb9c7178e405a40afc","size":5115},{"sha1":"ea1617043bd9a91e1b97a457368cea7015c9f69c","size":445},{"sha1":"2437a3565d4af5e623f7357d924b8149fa216468","size":1141},{"sha1":"73872beb071ddcfe69d99e2e20e4b2e3984c2daf","size":5430},{"sha1":"03bf0ab1aaeb15991f51cd79b9e4e58df8a10ce0","size":455},{"sha1":"feb5505678e612ea60534ded27517c602915a0c1","size":631},{"sha1":"4defd79f66e824ab7a3dc0e179904cc71a363439","size":9257},{"sha1":"801c173b6a047017746fcb914070d72c3923c208","size":670},{"sha1":"6570ee33e9fda8ae73614e5f1208fcade6799214","size":4246},{"sha1":"0","size":0},{"sha1":"7ed1535f12844f39b2149883e1ec0b86961b59ca","size":2342},{"sha1":"c53b079f18bf84e2f5bb6ee81798f8ce81a80105","size":2464},{"sha1":"d7eb129f9ccf2270a8ccb31449eb883d208ade4c","size":2503},{"sha1":"57647ab4563990458b97c54e6afbc29d6dbe10b3","size":3856},{"sha1":"62336364e5c631d0e10ad931ecffe826edba48a6","size":2432},{"sha1":"0c5c25aa804abf00869c97f8c68c72c5365aad0a","size":2512},{"sha1":"a006cafcff2ff4416630cc714b64ac0091bd1a9f","size":2320},{"sha1":"8d940a76b6d703d85fcd1a21680ef574ddd4023a","size":2298},{"sha1":"567a0bcb625d51bb0d7335589a63b57cc8d1fedd","size":2314},{"sha1":"c6a45ec741dad981094fa1a63a5ce034155bb91b","size":3100},{"sha1":"5b854a3e6efd168830b182306531c02a288329a6","size":2286},{"sha1":"c3073d6249f6baec5f44809c637014ad2df6c039","size":1421},{"sha1":"d6c562c4856d2eac83576567cb062536d6e8c9c5","size":2066},{"sha1":"0","size":0},{"sha1":"7afbb3f29409bc043251d27c213b11bc42c4ebd8","size":20390},{"sha1":"647b7b519e8acd6ab88400bec1a031ed8d2ab8bd","size":84557},{"sha1":"c77138087740ae2ef8380711ceeadb59d5c23c4d","size":159587},{"sha1":"e6876d363b0a2d4be7215961de87b09a80e78eac","size":11037},{"sha1":"cd7bf32abbe6d1ce9582ec3de5f8ff8b6fbebee0","size":1025},{"sha1":"f3a55f44fb81cf8ee908a3872841f70d6548f8c1","size":92555},{"sha1":"42a48a21f1cfe2e38c2d7983c3120fa3c4fbad04","size":4119},{"sha1":"b849bafad46251cbced13d4b501694dd21bd7464","size":369},{"sha1":"8fdf6f42eb6e3fad77ea4be4eb39046538ad8253","size":762},{"sha1":"5cffb2a825397676522b3f3733371a279d30b48c","size":43621},{"sha1":"53fb97f2e049c6df8779150d1a03d77af167a442","size":130042},{"sha1":"56935579f0a3122ac81739bbc646f62979b37615","size":52646},{"sha1":"28c90613a2ba4cfb8b8220b9c94e6ba2936309dd","size":28156},{"sha1":"df54dd0677051a537ab48ed03534d679459a97a4","size":692},{"sha1":"2fdea5cc014ca9bca0654471abb53f0d4f404d4f","size":11615},{"sha1":"ffd133e13617abd0c77eb86c932e6bd17e366fc1","size":449},{"sha1":"dcc0419e52d1db4199496b56f0b81f68eaef95a3","size":1908777},{"sha1":"a20e62e7888b738ea5e0fa1f4c8b12f98448559d","size":312035},{"sha1":"0","size":0},{"sha1":"815a518de62e14fccbf404ca3d92c01d164b529d","size":480}]
+FAILED
+Error processing app files: Error uploading application.
+Error performing request: Put https://api.system.aws-usw02-pr.ice.predix.io/v2/resource_match: net/http: request canceled

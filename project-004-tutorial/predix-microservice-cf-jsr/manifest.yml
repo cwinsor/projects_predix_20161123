@@ -1,0 +1,4 @@
+---
+applications:
+  - name: 01719-predix-microservice-cf-jsr
+    path: target/predix-microservice-cf-jsr-1.1.6.jar
