@@ -1,0 +1,18 @@
+total 40
+drwxrwxr-x  3 predix predix 4096 Nov 27 17:57 .
+drwxrwxr-x 11 predix predix 4096 Nov 23 21:34 ..
+-rw-rw-r--  1 predix predix    0 Nov 27 17:16 blah.txt
+-rw-rw-r--  1 predix predix    0 Nov 25 20:54 cf
+-rw-rw-r--  1 predix predix    5 Nov 26 01:12 cwinsor.temp.html
+-rw-rw-r--  1 predix predix    0 Nov 26 02:57 go.py
+drwxr-xr-x  2 predix predix   85 Nov 26 14:11 .ipynb_checkpoints
+-rw-rw-r--  1 predix predix   68 Nov 26 01:12 manifest.yml
+-rw-rw-r--  1 predix predix  957 Nov 25 19:49 manifest.yml.saved
+-rw-rw-r--  1 predix predix 7997 Nov 27 17:57 nb_create_uaa_and_asset.ipynb
+-rw-rw-r--  1 predix predix    0 Nov 27 17:57 std_err.txt
+-rw-rw-r--  1 predix predix    0 Nov 27 17:56 std_in.txt
+-rw-rw-r--  1 predix predix    0 Nov 27 17:57 std_out.txt
+-rw-rw-r--  1 predix predix 1620 Nov 26 01:47 temp_bound_to_asset
+-rw-rw-r--  1 predix predix 1561 Nov 26 01:20 temp_bound_to_uaa
+-rw-rw-r--  1 predix predix 1548 Nov 26 02:06 temp_token
+-rw-rw-r--  1 predix predix    0 Nov 25 21:18 uaac

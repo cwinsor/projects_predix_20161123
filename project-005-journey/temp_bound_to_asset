@@ -1,4 +1,4 @@
-Getting env variables for app cw01719-005-predix-journey in org cwinsor@gmail.com / space dev as cwinsor@gmail.com...
+Getting env variables for app cwinsor-005-predix-journey in org cwinsor@gmail.com / space dev as cwinsor@gmail.com...
 OK
 
 System-Provided:
@@ -7,18 +7,18 @@ System-Provided:
   "predix-asset": [
    {
     "credentials": {
-     "instanceId": "895c0ee8-ecaf-496f-a3b4-5c7d6997eddd",
-     "scriptEngine_uri": "https://895c0ee8-ecaf-496f-a3b4-5c7d6997eddd.predix-script-engine.run.aws-usw02-pr.ice.predix.io",
+     "instanceId": "ec37b929-ba82-4746-a2fe-b285987a44aa",
+     "scriptEngine_uri": "https://ec37b929-ba82-4746-a2fe-b285987a44aa.predix-script-engine.run.aws-usw02-pr.ice.predix.io",
      "uri": "https://predix-asset.run.aws-usw02-pr.ice.predix.io",
      "zone": {
       "http-header-name": "Predix-Zone-Id",
-      "http-header-value": "895c0ee8-ecaf-496f-a3b4-5c7d6997eddd",
-      "oauth-scope": "predix-asset.zones.895c0ee8-ecaf-496f-a3b4-5c7d6997eddd.user"
+      "http-header-value": "ec37b929-ba82-4746-a2fe-b285987a44aa",
+      "oauth-scope": "predix-asset.zones.ec37b929-ba82-4746-a2fe-b285987a44aa.user"
      }
     },
     "label": "predix-asset",
     "name": "my-asset",
-    "plan": "Tiered",
+    "plan": "Free",
     "provider": null,
     "syslog_drain_url": null,
     "tags": [],
@@ -30,25 +30,25 @@ System-Provided:
 
 {
  "VCAP_APPLICATION": {
-  "application_id": "9261b1b5-ef7b-4442-923b-a0d619324379",
-  "application_name": "cw01719-005-predix-journey",
+  "application_id": "e2ee3040-99a0-4ef8-80d3-8da32f9b1b21",
+  "application_name": "cwinsor-005-predix-journey",
   "application_uris": [
-   "cw01719-005-predix-journey.run.aws-usw02-pr.ice.predix.io"
+   "cwinsor-005-predix-journey.run.aws-usw02-pr.ice.predix.io"
   ],
-  "application_version": "6cf2ae31-a747-4cd4-bc29-a51bc2d9c64b",
+  "application_version": "1103ce46-989e-49bf-80d8-f29ff56f2dda",
   "limits": {
    "disk": 1024,
    "fds": 16384,
    "mem": 256
   },
-  "name": "cw01719-005-predix-journey",
+  "name": "cwinsor-005-predix-journey",
   "space_id": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
   "space_name": "dev",
   "uris": [
-   "cw01719-005-predix-journey.run.aws-usw02-pr.ice.predix.io"
+   "cwinsor-005-predix-journey.run.aws-usw02-pr.ice.predix.io"
   ],
   "users": null,
-  "version": "6cf2ae31-a747-4cd4-bc29-a51bc2d9c64b"
+  "version": "1103ce46-989e-49bf-80d8-f29ff56f2dda"
  }
 }
 
