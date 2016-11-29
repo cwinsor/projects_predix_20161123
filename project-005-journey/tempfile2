@@ -1,0 +1,664 @@
+API endpoint: https://api.system.aws-usw02-pr.ice.predix.io
+
+REQUEST: [2016-11-29T15:47:52Z]
+GET /v2/info HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-29T15:47:53Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 683
+Content-Type: application/json;charset=utf-8
+Date: Tue, 29 Nov 2016 15:47:53 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 2e150844-5b0c-41cc-480f-81dfbe67a441
+X-Vcap-Request-Id: 2e150844-5b0c-41cc-480f-81dfbe67a441::db4f4669-1efc-46b5-aec6-ac31f868eb5e
+
+{"name":"","build":"","support":"http://support.cloudfoundry.com","version":0,"description":"Cloud Foundry GE Open Sandbox","authorization_endpoint":"https://login.system.aws-usw02-pr.ice.predix.io","token_endpoint":"https://uaa.system.aws-usw02-pr.ice.predix.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.62.0","app_ssh_endpoint":"ssh.system.aws-usw02-pr.ice.predix.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.system.aws-usw02-pr.ice.predix.io:443","doppler_logging_endpoint":"wss://doppler.system.aws-usw02-pr.ice.predix.io:443"}
+
+REQUEST: [2016-11-29T15:47:53Z]
+GET /login HTTP/1.1
+Host: login.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-29T15:47:53Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 496
+Cache-Control: no-store
+Content-Language: en-US
+Content-Type: application/json;charset=UTF-8
+Date: Tue, 29 Nov 2016 15:47:53 GMT
+Server: Apache-Coyote/1.1
+Set-Cookie: X-Uaa-Csrf=ZjKFD1; Expires=Tue, 29-Nov-2016 15:52:53 GMT; HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: 0cabbc67-73a7-449f-608f-eb53d294ac4e
+X-Xss-Protection: 1; mode=block
+
+{"app":{"version":"3.7.3"},"links":{"uaa":"https://uaa.system.aws-usw02-pr.ice.predix.io","passwd":"https://login.system.aws-usw02-pr.ice.predix.io/forgot_password","login":"https://login.system.aws-usw02-pr.ice.predix.io","register":"https://predix.io/registration/"},"zone_name":"uaa","entityID":"login.system.aws-usw02-pr.ice.predix.io","commit_id":"4a77055","idpDefinitions":{},"prompts":{"username":["text","Email"],"password":["password","Password"]},"timestamp":"2016-09-17T00:20:25+0000"}
+
+Email> 
+Password> 
+Authenticating...
+
+REQUEST: [2016-11-29T15:48:06Z]
+POST /oauth/token HTTP/1.1
+Host: login.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+grant_type=password&password=[PRIVATE DATA HIDDEN]&scope=&username=cwinsor%40gmail.com
+
+RESPONSE: [2016-11-29T15:48:06Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1431
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Tue, 29 Nov 2016 15:48:05 GMT
+Pragma: no-cache
+Server: Apache-Coyote/1.1
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: dc728396-ef64-4b22-6b8c-8f6b6379f38f
+X-Xss-Protection: 1; mode=block
+
+{"access_token":"[PRIVATE DATA HIDDEN]","token_type":"bearer","refresh_token":"[PRIVATE DATA HIDDEN]","expires_in":7199,"scope":"openid uaa.user cloud_controller.read password.write cloud_controller.write","jti":"6cde61570af24ee9b158d1966feefb0c"}
+OK
+
+
+REQUEST: [2016-11-29T15:48:06Z]
+GET /v2/organizations?order-by=name HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-29T15:48:07Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1529
+Content-Type: application/json;charset=utf-8
+Date: Tue, 29 Nov 2016 15:48:07 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 63d4d28d-8017-4098-67ae-dbdc918d7606
+X-Vcap-Request-Id: 63d4d28d-8017-4098-67ae-dbdc918d7606::e6eeae1b-8180-49af-9909-b4340ca35971
+
+{
+  "total_results": 1,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+        "url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+        "created_at": "2016-11-08T19:47:16Z",
+        "updated_at": "2016-11-22T19:18:06Z"
+      },
+      "entity": {
+        "name": "cwinsor@gmail.com",
+        "billing_enabled": false,
+        "quota_definition_guid": "2795829e-11c2-4260-a9b3-8bd4d2b7d2f1",
+        "status": "active",
+        "quota_definition_url": "/v2/quota_definitions/2795829e-11c2-4260-a9b3-8bd4d2b7d2f1",
+        "spaces_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/spaces",
+        "domains_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/domains",
+        "private_domains_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/private_domains",
+        "users_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/users",
+        "managers_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/managers",
+        "billing_managers_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/billing_managers",
+        "auditors_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/auditors",
+        "app_events_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/app_events",
+        "space_quota_definitions_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/space_quota_definitions"
+      }
+    }
+  ]
+}
+Targeted org cwinsor@gmail.com
+
+
+REQUEST: [2016-11-29T15:48:07Z]
+GET /v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/spaces?order-by=name&inline-relations-depth=1 HTTP/1.1
+Host: api.system.aws-usw02-pr.ice.predix.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/json
+User-Agent: go-cli 6.21.1+6fd3c9f / linux
+
+
+
+RESPONSE: [2016-11-29T15:48:08Z]
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 21311
+Content-Type: application/json;charset=utf-8
+Date: Tue, 29 Nov 2016 15:48:08 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 5a5174bf-dc5d-44cc-5d00-bb568111eb2b
+X-Vcap-Request-Id: 5a5174bf-dc5d-44cc-5d00-bb568111eb2b::e4a38c8f-5254-4d51-8507-815f2d1d2334
+
+{
+  "total_results": 1,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+        "url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+        "created_at": "2016-11-22T16:36:54Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "dev",
+        "organization_guid": "bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+        "space_quota_definition_guid": null,
+        "isolation_segment_guid": null,
+        "allow_ssh": true,
+        "organization_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+        "organization": {
+          "metadata": {
+            "guid": "bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+            "url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216",
+            "created_at": "2016-11-08T19:47:16Z",
+            "updated_at": "2016-11-22T19:18:06Z"
+          },
+          "entity": {
+            "name": "cwinsor@gmail.com",
+            "billing_enabled": false,
+            "quota_definition_guid": "2795829e-11c2-4260-a9b3-8bd4d2b7d2f1",
+            "status": "active",
+            "quota_definition_url": "/v2/quota_definitions/2795829e-11c2-4260-a9b3-8bd4d2b7d2f1",
+            "spaces_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/spaces",
+            "domains_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/domains",
+            "private_domains_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/private_domains",
+            "users_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/users",
+            "managers_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/managers",
+            "billing_managers_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/billing_managers",
+            "auditors_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/auditors",
+            "app_events_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/app_events",
+            "space_quota_definitions_url": "/v2/organizations/bd806ab3-1297-47cd-bdcc-1ab816ae2216/space_quota_definitions"
+          }
+        },
+        "developers_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/developers",
+        "developers": [
+          {
+            "metadata": {
+              "guid": "3563f916-8b9f-44a2-b103-1bcdb6a5f2d6",
+              "url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6",
+              "created_at": "2016-11-08T19:47:16Z",
+              "updated_at": null
+            },
+            "entity": {
+              "admin": false,
+              "active": false,
+              "default_space_guid": null,
+              "spaces_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/spaces",
+              "organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/organizations",
+              "managed_organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/managed_organizations",
+              "billing_managed_organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/billing_managed_organizations",
+              "audited_organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/audited_organizations",
+              "managed_spaces_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/managed_spaces",
+              "audited_spaces_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/audited_spaces"
+            }
+          }
+        ],
+        "managers_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/managers",
+        "managers": [
+          {
+            "metadata": {
+              "guid": "3563f916-8b9f-44a2-b103-1bcdb6a5f2d6",
+              "url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6",
+              "created_at": "2016-11-08T19:47:16Z",
+              "updated_at": null
+            },
+            "entity": {
+              "admin": false,
+              "active": false,
+              "default_space_guid": null,
+              "spaces_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/spaces",
+              "organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/organizations",
+              "managed_organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/managed_organizations",
+              "billing_managed_organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/billing_managed_organizations",
+              "audited_organizations_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/audited_organizations",
+              "managed_spaces_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/managed_spaces",
+              "audited_spaces_url": "/v2/users/3563f916-8b9f-44a2-b103-1bcdb6a5f2d6/audited_spaces"
+            }
+          }
+        ],
+        "auditors_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/auditors",
+        "auditors": [
+
+        ],
+        "apps_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/apps",
+        "apps": [
+
+        ],
+        "routes_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/routes",
+        "routes": [
+          {
+            "metadata": {
+              "guid": "b249ca74-e8f4-48e6-886d-5bae917e1b99",
+              "url": "/v2/routes/b249ca74-e8f4-48e6-886d-5bae917e1b99",
+              "created_at": "2016-11-22T17:13:42Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "01719-predix-helloworld-webapp",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/b249ca74-e8f4-48e6-886d-5bae917e1b99/apps",
+              "route_mappings_url": "/v2/routes/b249ca74-e8f4-48e6-886d-5bae917e1b99/route_mappings"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "e62835b8-3e87-4caa-943f-a29a74aa7197",
+              "url": "/v2/routes/e62835b8-3e87-4caa-943f-a29a74aa7197",
+              "created_at": "2016-11-22T17:18:25Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "cw-01719-predix-helloworld-webapp",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/e62835b8-3e87-4caa-943f-a29a74aa7197/apps",
+              "route_mappings_url": "/v2/routes/e62835b8-3e87-4caa-943f-a29a74aa7197/route_mappings"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "1fa7202a-23df-41ea-8833-2bb20a1eea57",
+              "url": "/v2/routes/1fa7202a-23df-41ea-8833-2bb20a1eea57",
+              "created_at": "2016-11-22T18:10:17Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "cw01719-000-predix-helloworld-webapp",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/1fa7202a-23df-41ea-8833-2bb20a1eea57/apps",
+              "route_mappings_url": "/v2/routes/1fa7202a-23df-41ea-8833-2bb20a1eea57/route_mappings"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "78cdc5e0-61c6-45a5-baf4-d9507c18b7df",
+              "url": "/v2/routes/78cdc5e0-61c6-45a5-baf4-d9507c18b7df",
+              "created_at": "2016-11-22T18:12:31Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "cw01719-005-predix-journey",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/78cdc5e0-61c6-45a5-baf4-d9507c18b7df/apps",
+              "route_mappings_url": "/v2/routes/78cdc5e0-61c6-45a5-baf4-d9507c18b7df/route_mappings"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "a1bf3513-a4a9-4074-94d7-9d26f7c4eca6",
+              "url": "/v2/routes/a1bf3513-a4a9-4074-94d7-9d26f7c4eca6",
+              "created_at": "2016-11-25T19:48:00Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "cwinsortemphtml",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/a1bf3513-a4a9-4074-94d7-9d26f7c4eca6/apps",
+              "route_mappings_url": "/v2/routes/a1bf3513-a4a9-4074-94d7-9d26f7c4eca6/route_mappings"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "839dafca-8aca-46c0-bbcb-589fc97da30a",
+              "url": "/v2/routes/839dafca-8aca-46c0-bbcb-589fc97da30a",
+              "created_at": "2016-11-25T19:49:29Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "cw01719-005b-predix-journey",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/839dafca-8aca-46c0-bbcb-589fc97da30a/apps",
+              "route_mappings_url": "/v2/routes/839dafca-8aca-46c0-bbcb-589fc97da30a/route_mappings"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "2d3ea664-775a-4b64-b421-0ac2d3fa3410",
+              "url": "/v2/routes/2d3ea664-775a-4b64-b421-0ac2d3fa3410",
+              "created_at": "2016-11-26T00:04:38Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "cwinsor-005-predix-journey",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/2d3ea664-775a-4b64-b421-0ac2d3fa3410/apps",
+              "route_mappings_url": "/v2/routes/2d3ea664-775a-4b64-b421-0ac2d3fa3410/route_mappings"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "2687b4e2-ebbd-4d5c-bafd-e06ce458ec3f",
+              "url": "/v2/routes/2687b4e2-ebbd-4d5c-bafd-e06ce458ec3f",
+              "created_at": "2016-11-28T14:53:53Z",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "cwinsor-temp-app",
+              "path": "",
+              "domain_guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_instance_guid": null,
+              "port": null,
+              "domain_url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "apps_url": "/v2/routes/2687b4e2-ebbd-4d5c-bafd-e06ce458ec3f/apps",
+              "route_mappings_url": "/v2/routes/2687b4e2-ebbd-4d5c-bafd-e06ce458ec3f/route_mappings"
+            }
+          }
+        ],
+        "domains_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/domains",
+        "domains": [
+          {
+            "metadata": {
+              "guid": "2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "url": "/v2/shared_domains/2a4227ca-1fd5-4c19-a284-29ab47650c8b",
+              "created_at": "2015-09-10T22:25:39Z",
+              "updated_at": "2016-10-21T04:41:17Z"
+            },
+            "entity": {
+              "name": "run.aws-usw02-pr.ice.predix.io",
+              "router_group_guid": null,
+              "router_group_type": null
+            }
+          },
+          {
+            "metadata": {
+              "guid": "b63389cc-e7c6-4073-bfd2-2457739f0273",
+              "url": "/v2/shared_domains/b63389cc-e7c6-4073-bfd2-2457739f0273",
+              "created_at": "2016-01-25T19:54:23Z",
+              "updated_at": null
+            },
+            "entity": {
+              "name": "run.aws-usw02-pr-priv.ice.predix.io",
+              "router_group_guid": null,
+              "router_group_type": null
+            }
+          },
+          {
+            "metadata": {
+              "guid": "d6cbf7dc-baa5-4b15-8783-91cbc18b3b70",
+              "url": "/v2/shared_domains/d6cbf7dc-baa5-4b15-8783-91cbc18b3b70",
+              "created_at": "2016-05-16T02:13:21Z",
+              "updated_at": null
+            },
+            "entity": {
+              "name": "run.aws-usw02-pr-oo-dev.ice.predix.io",
+              "router_group_guid": null,
+              "router_group_type": null
+            }
+          },
+          {
+            "metadata": {
+              "guid": "227974f0-d0dd-4b26-b1e4-c2551e5b1a69",
+              "url": "/v2/shared_domains/227974f0-d0dd-4b26-b1e4-c2551e5b1a69",
+              "created_at": "2016-11-10T17:20:15Z",
+              "updated_at": null
+            },
+            "entity": {
+              "name": "run.asv-pr.ice.predix.io",
+              "router_group_guid": null,
+              "router_group_type": null
+            }
+          }
+        ],
+        "service_instances_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/service_instances",
+        "service_instances": [
+          {
+            "metadata": {
+              "guid": "ec37b929-ba82-4746-a2fe-b285987a44aa",
+              "url": "/v2/service_instances/ec37b929-ba82-4746-a2fe-b285987a44aa",
+              "created_at": "2016-11-26T01:38:39Z",
+              "updated_at": null
+            },
+            "entity": {
+              "name": "my-asset",
+              "credentials": {
+
+              },
+              "service_plan_guid": "f13446a3-c6a8-47cd-8bb3-f8c829c958ef",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "gateway_data": null,
+              "dashboard_url": null,
+              "type": "managed_service_instance",
+              "last_operation": {
+                "type": "create",
+                "state": "succeeded",
+                "description": "",
+                "updated_at": null,
+                "created_at": "2016-11-26T01:38:39Z"
+              },
+              "tags": [
+
+              ],
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_plan_url": "/v2/service_plans/f13446a3-c6a8-47cd-8bb3-f8c829c958ef",
+              "service_bindings_url": "/v2/service_instances/ec37b929-ba82-4746-a2fe-b285987a44aa/service_bindings",
+              "service_keys_url": "/v2/service_instances/ec37b929-ba82-4746-a2fe-b285987a44aa/service_keys",
+              "routes_url": "/v2/service_instances/ec37b929-ba82-4746-a2fe-b285987a44aa/routes"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "dc30dc51-7d7f-48cd-9f64-bae6ab4750f4",
+              "url": "/v2/service_instances/dc30dc51-7d7f-48cd-9f64-bae6ab4750f4",
+              "created_at": "2016-11-26T01:12:20Z",
+              "updated_at": null
+            },
+            "entity": {
+              "name": "my-uaa",
+              "credentials": {
+
+              },
+              "service_plan_guid": "7b3e7f66-b1b8-448e-857e-79e2fde2e6c8",
+              "space_guid": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "gateway_data": null,
+              "dashboard_url": null,
+              "type": "managed_service_instance",
+              "last_operation": {
+                "type": "create",
+                "state": "succeeded",
+                "description": "",
+                "updated_at": null,
+                "created_at": "2016-11-26T01:12:20Z"
+              },
+              "tags": [
+
+              ],
+              "space_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
+              "service_plan_url": "/v2/service_plans/7b3e7f66-b1b8-448e-857e-79e2fde2e6c8",
+              "service_bindings_url": "/v2/service_instances/dc30dc51-7d7f-48cd-9f64-bae6ab4750f4/service_bindings",
+              "service_keys_url": "/v2/service_instances/dc30dc51-7d7f-48cd-9f64-bae6ab4750f4/service_keys",
+              "routes_url": "/v2/service_instances/dc30dc51-7d7f-48cd-9f64-bae6ab4750f4/routes"
+            }
+          }
+        ],
+        "app_events_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/app_events",
+        "events_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/events",
+        "security_groups_url": "/v2/spaces/f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc/security_groups",
+        "security_groups": [
+          {
+            "metadata": {
+              "guid": "f806b447-01b1-41e3-8c4a-601a538597db",
+              "url": "/v2/security_groups/f806b447-01b1-41e3-8c4a-601a538597db",
+              "created_at": "2015-08-07T17:13:27Z",
+              "updated_at": null
+            },
+            "entity": {
+              "name": "dns",
+              "rules": [
+                {
+                  "destination": "0.0.0.0/0",
+                  "ports": "53",
+                  "protocol": "tcp"
+                },
+                {
+                  "destination": "0.0.0.0/0",
+                  "ports": "53",
+                  "protocol": "udp"
+                }
+              ],
+              "running_default": true,
+              "staging_default": true,
+              "spaces_url": "/v2/security_groups/f806b447-01b1-41e3-8c4a-601a538597db/spaces"
+            }
+          },
+          {
+            "metadata": {
+              "guid": "d2c241d2-de16-4f51-bbcd-b88619905c20",
+              "url": "/v2/security_groups/d2c241d2-de16-4f51-bbcd-b88619905c20",
+              "created_at": "2015-09-27T07:13:10Z",
+              "updated_at": "2016-11-01T18:16:22Z"
+            },
+            "entity": {
+              "name": "running",
+              "rules": [
+                {
+                  "destination": "0.0.0.0-9.255.255.255",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.6.0-10.72.6.255",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.7.0-10.72.7.255",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.8.0-10.72.8.255",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.9.0-10.72.9.255",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "11.0.0.0-172.15.255.255",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "172.32.0.0-192.67.255.255",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.8.4.0/24",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.28.0/22",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.27.0/22",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.24.0/22",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "10.72.30.0/22",
+                  "protocol": "all"
+                },
+                {
+                  "destination": "192.169.0.0-255.255.255.255",
+                  "protocol": "all"
+                }
+              ],
+              "running_default": true,
+              "staging_default": false,
+              "spaces_url": "/v2/security_groups/d2c241d2-de16-4f51-bbcd-b88619905c20/spaces"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+Targeted space dev
+
+
+
+API endpoint:   https://api.system.aws-usw02-pr.ice.predix.io (API version: 2.62.0)
+User:           cwinsor@gmail.com
+Org:            cwinsor@gmail.com
+Space:          dev

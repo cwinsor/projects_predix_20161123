@@ -1,4 +1,4 @@
-Getting env variables for app cwinsor-005-predix-journey in org cwinsor@gmail.com / space dev as cwinsor@gmail.com...
+Getting env variables for app cwinsor-temp-app in org cwinsor@gmail.com / space dev as cwinsor@gmail.com...
 OK
 
 System-Provided:
@@ -29,25 +29,25 @@ System-Provided:
 
 {
  "VCAP_APPLICATION": {
-  "application_id": "e092f584-2c1b-4131-b7f4-5defcc179527",
-  "application_name": "cwinsor-005-predix-journey",
+  "application_id": "78459189-bc23-445f-9f30-7e9b5525ab43",
+  "application_name": "cwinsor-temp-app",
   "application_uris": [
-   "cwinsor-005-predix-journey.run.aws-usw02-pr.ice.predix.io"
+   "cwinsor-temp-app.run.aws-usw02-pr.ice.predix.io"
   ],
-  "application_version": "de610fc3-982c-4b61-b051-e857fb76ec1d",
+  "application_version": "9dba535f-e9ea-4a6f-88b3-160b77639174",
   "limits": {
    "disk": 1024,
    "fds": 16384,
    "mem": 256
   },
-  "name": "cwinsor-005-predix-journey",
+  "name": "cwinsor-temp-app",
   "space_id": "f9c7e95d-76ad-477e-aaa8-ce8103b4e7cc",
   "space_name": "dev",
   "uris": [
-   "cwinsor-005-predix-journey.run.aws-usw02-pr.ice.predix.io"
+   "cwinsor-temp-app.run.aws-usw02-pr.ice.predix.io"
   ],
   "users": null,
-  "version": "de610fc3-982c-4b61-b051-e857fb76ec1d"
+  "version": "9dba535f-e9ea-4a6f-88b3-160b77639174"
  }
 }
 
