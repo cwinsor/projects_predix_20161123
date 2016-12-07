@@ -1,0 +1,15 @@
+./project-000-hello-world-app/Predix-HelloWorld-WebApp-modified/manifest.yml
+./project-000-hello-world-app/Predix-HelloWorld-WebApp-original/manifest.yml
+./project-000-hello-world-app/Predix-HelloWorld-WebApp/manifest.yml
+./project-001-gs-spring-boot/gs-spring-boot/complete/manifest.yml
+./project-002-predix-nodejs-starter/predix-nodejs-starter/manifest.yml
+./project-003-predix-microservice-cf-jsr/predix-microservice-cf-jsr/manifest.yml
+./project-003-predix-microservice-cf-spring/predix-microservice-cf-spring/manifest.yml
+./project-004-tutorial/predix-microservice-cf-jsr/manifest.yml
+./project-004-tutorial/predix-nodejs-starter/manifest.yml
+./project-005-journey/manifest.yml
+./project-007-python-cf-examples/python-cf-examples/01-simple-python-app/manifest.yml
+./project-007-python-cf-examples/python-cf-examples/02-pydata-spyre-app/manifest.yml
+./project-007-python-cf-examples/python-cf-examples/03-services-redis/manifest.yml
+./project-007-python-cf-examples/python-cf-examples/04-learning-api/manifest.yml
+./project-009-raspberry-pi/predix-machine-template-adapter-pi/predix-scripts/bash/cwinsor0171-hello-world/manifest.yml
