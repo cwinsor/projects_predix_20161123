@@ -1,0 +1,6 @@
+---
+applications:
+  - name: cwinsor-predix-microservice-cf-spring
+    path: target/predix-microservice-cf-spring-1.1.6.jar
+    memory: 512M
+    timeout : 180
